@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mechfinder">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/splash_photo"
+        android:label="UrMechanic-Roadside Assistance"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.mechfinder.Main2Activity"></activity>
+        <activity android:name="com.example.mechfinder.ChatMechanicActivity" />
+        <activity android:name="com.example.mechfinder.ChatActivity" />
+        <activity android:name="com.example.mechfinder.TipsActivity" />
+        <activity android:name="com.example.mechfinder.reminderTyre" />
+        <activity android:name="com.example.mechfinder.TipsAccident" />
+        <activity android:name="com.example.mechfinder.InvoiceMechanic1" />
+        <activity android:name="com.example.mechfinder.InvoiceCustomer" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.example.mechfinder.MapsActivity4"
+            android:label="@string/title_activity_maps4" />
+        <activity
+            android:name="com.example.mechfinder.MapsActivity3"
+            android:label="@string/title_activity_maps3" />
+        <activity
+            android:name="com.example.mechfinder.MapsActivity2"
+            android:label="@string/title_activity_maps2" />
+        <activity android:name="com.example.mechfinder.Retrieve" />
+        <activity android:name="com.example.mechfinder.AvailableActivity" />
+        <activity android:name="com.example.mechfinder.DriverMainActivity" />
+        <activity android:name="com.example.mechfinder.ServiceRequestActivity" />
+        <activity android:name="com.example.mechfinder.TestActivity" />
+        <activity android:name="com.example.mechfinder.PaymentActivity" />
+        <activity android:name="com.example.mechfinder.MainActivity" />
+
+        <service
+            android:name="com.example.mechfinder.onAppKilled"
+            android:stopWithTask="false" />
+
+        <activity android:name="com.example.mechfinder.HistorySingleActivity" />
+        <activity android:name="com.example.mechfinder.HistoryActivity" />
+        <activity android:name="com.example.mechfinder.DriverSettingActivity" />
+        <activity android:name="com.example.mechfinder.CustomerSettingActivity" />
+        <activity android:name="com.example.mechfinder.MapSearchActivity" />
+        <activity android:name="com.example.mechfinder.OptionActivity" />
+        <activity
+            android:name="com.example.mechfinder.CustomersMapActivity"
+            android:label="@string/title_activity_customer_maps" />
+        <activity
+            android:name="com.example.mechfinder.DriversMapActivity"
+            android:label="@string/title_activity_drivers_map" />
+        <activity android:name="com.example.mechfinder.CustomerLoginRegisterActivity" />
+        <activity android:name="com.example.mechfinder.DriverLoginRegisterActivity" />
+        <activity android:name="com.example.mechfinder.WelcomeActivity" />
+        <activity
+            android:name="com.example.mechfinder.Pop"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity android:name="com.example.mechfinder.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.mechfinder.MapsActivity" />
+    </application>
+
+</manifest>

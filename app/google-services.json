@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "992977411045",
+    "firebase_url": "https://mechanicfinder-2558b-default-rtdb.firebaseio.com",
+    "project_id": "mechanicfinder-2558b",
+    "storage_bucket": "mechanicfinder-2558b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992977411045:android:94fc11e4b4d68e0828ed0c",
+        "android_client_info": {
+          "package_name": "com.example.mechfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992977411045-i1mts9h3k949mcgsecn7lvd860dqcprs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM-aziwV7293uAcGV26PbDi6xn9vEuL0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992977411045-i1mts9h3k949mcgsecn7lvd860dqcprs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:992977411045:android:753171953959e69d28ed0c",
+        "android_client_info": {
+          "package_name": "com.example.roadside_assisstance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "992977411045-lkackulej572ngp3im2e1q0cf3gbgfa7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.roadside_assisstance",
+            "certificate_hash": "ddbc57e26dd88714e3daf84a23cc677e44e1f9ac"
+          }
+        },
+        {
+          "client_id": "992977411045-i1mts9h3k949mcgsecn7lvd860dqcprs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM-aziwV7293uAcGV26PbDi6xn9vEuL0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "992977411045-i1mts9h3k949mcgsecn7lvd860dqcprs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
