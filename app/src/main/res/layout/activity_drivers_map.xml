@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
     <FrameLayout
-    tools:context="DriversMapActivity"
+    tools:context=".MechanicMapActivity"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"

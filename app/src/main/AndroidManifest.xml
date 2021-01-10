@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mechfinder">
+    package="com.example.mechfinderapp">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -15,17 +15,17 @@
         android:allowBackup="true"
         android:icon="@drawable/splash_photo"
         android:label="UrMechanic-Roadside Assistance"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/splash_photo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.mechfinder.Main2Activity"></activity>
-        <activity android:name="com.example.mechfinder.ChatMechanicActivity" />
-        <activity android:name="com.example.mechfinder.ChatActivity" />
-        <activity android:name="com.example.mechfinder.TipsActivity" />
-        <activity android:name="com.example.mechfinder.reminderTyre" />
-        <activity android:name="com.example.mechfinder.TipsAccident" />
-        <activity android:name="com.example.mechfinder.InvoiceMechanic1" />
-        <activity android:name="com.example.mechfinder.InvoiceCustomer" />
+        <activity android:name="com.example.mechfinderapp.Main2Activity"></activity>
+        <activity android:name="com.example.mechfinderapp.ChatMechanicActivity" />
+        <activity android:name="com.example.mechfinderapp.ChatActivity" />
+        <activity android:name="com.example.mechfinderapp.TipsActivity" />
+        <activity android:name="com.example.mechfinderapp.reminderTyre" />
+        <activity android:name="com.example.mechfinderapp.TipsAccident" />
+        <activity android:name="com.example.mechfinderapp.InvoiceMechanic1" />
+        <activity android:name="com.example.mechfinderapp.InvoiceCustomer" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -39,52 +39,52 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.example.mechfinder.MapsActivity4"
+            android:name="com.example.mechfinderapp.MapsActivity4"
             android:label="@string/title_activity_maps4" />
         <activity
-            android:name="com.example.mechfinder.MapsActivity3"
+            android:name="com.example.mechfinderapp.MapsActivity3"
             android:label="@string/title_activity_maps3" />
         <activity
-            android:name="com.example.mechfinder.MapsActivity2"
+            android:name="com.example.mechfinderapp.MapsActivity2"
             android:label="@string/title_activity_maps2" />
-        <activity android:name="com.example.mechfinder.Retrieve" />
-        <activity android:name="com.example.mechfinder.AvailableActivity" />
-        <activity android:name="com.example.mechfinder.DriverMainActivity" />
-        <activity android:name="com.example.mechfinder.ServiceRequestActivity" />
-        <activity android:name="com.example.mechfinder.TestActivity" />
-        <activity android:name="com.example.mechfinder.PaymentActivity" />
-        <activity android:name="com.example.mechfinder.MainActivity" />
+        <activity android:name="com.example.mechfinderapp.Retrieve" />
+        <activity android:name="com.example.mechfinderapp.AvailableActivity" />
+        <activity android:name="com.example.mechfinderapp.MechanicMainActivity" />
+        <activity android:name="com.example.mechfinderapp.ServiceRequestActivity" />
+        <activity android:name="com.example.mechfinderapp.TestActivity" />
+        <activity android:name="com.example.mechfinderapp.PaymentActivity" />
+        <activity android:name="com.example.mechfinderapp.MainActivity" />
 
         <service
-            android:name="com.example.mechfinder.onAppKilled"
+            android:name="com.example.mechfinderapp.onAppKilled"
             android:stopWithTask="false" />
 
-        <activity android:name="com.example.mechfinder.HistorySingleActivity" />
-        <activity android:name="com.example.mechfinder.HistoryActivity" />
-        <activity android:name="com.example.mechfinder.DriverSettingActivity" />
-        <activity android:name="com.example.mechfinder.CustomerSettingActivity" />
-        <activity android:name="com.example.mechfinder.MapSearchActivity" />
-        <activity android:name="com.example.mechfinder.OptionActivity" />
+        <activity android:name="com.example.mechfinderapp.HistorySingleActivity" />
+        <activity android:name="com.example.mechfinderapp.HistoryActivity" />
+        <activity android:name="com.example.mechfinderapp.MechanicSettingActivity" />
+        <activity android:name="com.example.mechfinderapp.CustomerSettingActivity" />
+        <activity android:name="com.example.mechfinderapp.MapSearchActivity" />
+        <activity android:name="com.example.mechfinderapp.OptionActivity" />
         <activity
-            android:name="com.example.mechfinder.CustomersMapActivity"
+            android:name="com.example.mechfinderapp.CustomersMapActivity"
             android:label="@string/title_activity_customer_maps" />
         <activity
-            android:name="com.example.mechfinder.DriversMapActivity"
+            android:name="com.example.mechfinderapp.MechanicMapActivity"
             android:label="@string/title_activity_drivers_map" />
-        <activity android:name="com.example.mechfinder.CustomerLoginRegisterActivity" />
-        <activity android:name="com.example.mechfinder.DriverLoginRegisterActivity" />
-        <activity android:name="com.example.mechfinder.WelcomeActivity" />
+        <activity android:name="com.example.mechfinderapp.CustomerLoginRegisterActivity" />
+        <activity android:name="com.example.mechfinderapp.MechanicLoginRegisterActivity" />
+        <activity android:name="com.example.mechfinderapp.WelcomeActivity" />
         <activity
-            android:name="com.example.mechfinder.Pop"
+            android:name="com.example.mechfinderapp.Pop"
             android:theme="@style/AppTheme.CustomTheme" />
-        <activity android:name="com.example.mechfinder.SplashActivity">
+        <activity android:name="com.example.mechfinderapp.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.mechfinder.MapsActivity" />
+        <activity android:name="com.example.mechfinderapp.MapsActivity" />
     </application>
 
 </manifest>
