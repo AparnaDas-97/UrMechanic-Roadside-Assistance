@@ -115,7 +115,7 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
                                 getUserInformation("Customers", customerId);
                             }
                         }
-                        if (child.getKey().equals("driver")){
+                        if (child.getKey().equals("mechanic")){
                             driverId = child.getValue().toString();
                             if(!driverId.equals(currentUserId)){
                                 userDriverOrCustomer = "Customers";
@@ -211,7 +211,7 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
                 historyRideInfoDb.child("rating").setValue(rating);
-                DatabaseReference mDriverRatingDb = FirebaseDatabase.getInstance().getReference().child("Users").child("Drivers").child(driverId).child("rating");
+                DatabaseReference mDriverRatingDb = FirebaseDatabase.getInstance().getReference().child("Users").child("Mechanic").child(driverId).child("rating");
                 mDriverRatingDb.child(rideId).setValue(rating);
             }
         });
@@ -236,7 +236,7 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
             .clientId(PayPalConfig.PAYPAL_CLIENT_ID);
 
     private void payPalPayment() {
-        PayPalPayment payment = new PayPalPayment(new BigDecimal(ridePrice), "MYR", "Service Charge",
+        PayPalPayment payment = new PayPalPayment(new BigDecimal(ridePrice), "Rs", "Service Charge",
                 PayPalPayment.PAYMENT_INTENT_SALE);
 
         Intent intent = new Intent(this, PaymentActivity.class);
