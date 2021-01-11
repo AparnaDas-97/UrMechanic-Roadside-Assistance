@@ -185,7 +185,7 @@ public class DriversMapActivityNew extends FragmentActivity implements OnMapRead
             @Override
             public void onClick(View v) {
                 Intent intenthistory = new Intent(DriversMapActivityNew.this, HistoryActivity.class);
-                intenthistory.putExtra("customerOrDriver" ,"Drivers");
+                intenthistory.putExtra("customerOrMechanic" ,"Mechanic");
                 startActivity(intenthistory);
             }
         });
@@ -197,7 +197,7 @@ public class DriversMapActivityNew extends FragmentActivity implements OnMapRead
     private void GetAssignedCustomerRequest()
     {
         AssignedCustomerRef = FirebaseDatabase.getInstance().getReference().child("Users")
-                .child("Drivers").child(driverID).child("Customers Requests").child("CustomerRideID");
+                .child("Mechanic").child(driverID).child("Customers Requests").child("CustomerReqID");
 
         AssignedCustomerRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -251,7 +251,7 @@ public class DriversMapActivityNew extends FragmentActivity implements OnMapRead
                     }
 
                     pickupLatLng = new LatLng(LocationLat,LocationLng);
-                    pickupMarker = mMap.addMarker(new MarkerOptions().position(pickupLatLng).title("PickUp Location").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pickup)));
+                    pickupMarker = mMap.addMarker(new MarkerOptions().position(pickupLatLng).title("Location").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pickup)));
                     getRouteToMarker (pickupLatLng);
                 }
 
@@ -282,7 +282,7 @@ public class DriversMapActivityNew extends FragmentActivity implements OnMapRead
     private void GetAssignedCustomerDestination()
     {
         AssignedCustomerRef = FirebaseDatabase.getInstance().getReference().child("Users")
-                .child("Drivers").child(driverID).child("Customers Requests");
+                .child("Mechanic").child(driverID).child("Customers Requests");
 
         AssignedCustomerRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -370,7 +370,7 @@ public class DriversMapActivityNew extends FragmentActivity implements OnMapRead
         erasePolylines();
 
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DriversRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Drivers").child(userId).child("Customers Requests");
+        DriversRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Mechanic").child(userId).child("Customers Requests");
         DriversRef.removeValue();
 
         DatabaseReference CustomerDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Customers Requests");
@@ -401,7 +401,7 @@ public class DriversMapActivityNew extends FragmentActivity implements OnMapRead
 
     private void recordRide(){
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DatabaseReference DriversRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Drivers").child(userId).child("history");
+        DatabaseReference DriversRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Mechanic").child(userId).child("history");
         DatabaseReference CustomerRef = FirebaseDatabase.getInstance().getReference().child("Users").child("Customers").child(customerID).child("history");
         DatabaseReference HistoryRef = FirebaseDatabase.getInstance().getReference().child("history");
         String requestId = HistoryRef.push().getKey();
@@ -409,7 +409,7 @@ public class DriversMapActivityNew extends FragmentActivity implements OnMapRead
         DriversRef.child(requestId).setValue(true);
         CustomerRef.child(requestId).setValue(true);
         HashMap map = new HashMap();
-        map.put("driver" , userId);
+        map.put("mechanic" , userId);
         map.put("customer" , customerID);
         map.put("rating" , 0);
         map.put("timestamp" , getCurrentTimestamp());
@@ -502,10 +502,10 @@ public class DriversMapActivityNew extends FragmentActivity implements OnMapRead
             String userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
             //References to driver availability
-            DatabaseReference DriverAvailabilityRef = FirebaseDatabase.getInstance().getReference().child("Drivers Available");
+            DatabaseReference DriverAvailabilityRef = FirebaseDatabase.getInstance().getReference().child("Mechanic Available");
             GeoFire geoFireAvailability = new GeoFire(DriverAvailabilityRef);
 
-            DatabaseReference DriverWorkingRef = FirebaseDatabase.getInstance().getReference().child("Drivers Working");
+            DatabaseReference DriverWorkingRef = FirebaseDatabase.getInstance().getReference().child("Mechanic Working");
             GeoFire geoFireWorking = new GeoFire(DriverWorkingRef);
 
             switch(customerID)
@@ -540,7 +540,7 @@ public class DriversMapActivityNew extends FragmentActivity implements OnMapRead
     private void DisconnectTheDriver()
     {
         String userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DatabaseReference DriverAvailabilityRef = FirebaseDatabase.getInstance().getReference().child("Drivers Available");
+        DatabaseReference DriverAvailabilityRef = FirebaseDatabase.getInstance().getReference().child("Mechanic Available");
 
         GeoFire geoFire = new GeoFire(DriverAvailabilityRef);
         geoFire.removeLocation(userID);

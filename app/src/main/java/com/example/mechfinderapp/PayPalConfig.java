@@ -1,6 +1,6 @@
 package com.example.mechfinderapp;
 
 public class PayPalConfig {
-    public static final String PAYPAL_CLIENT_ID = "AWCU9Dt8ZO_iwKmeKZHt3fboZAHS3RUWOauSQ1_6EQthI1XbhMSpoT3Z2Y68Ky012MgWWDZrZnpByZ8z";
+    public static final String PAYPAL_CLIENT_ID = "AYsAj91msh1SC4QHbPkQZHtI570QcRXTztaZhkDwE0i_VeCOQc0MRPE3jitRx26Z-pTOI-VabSPZmQV1";
 }
 

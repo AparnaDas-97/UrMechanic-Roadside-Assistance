@@ -142,7 +142,9 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
                         }
                         */
                         if (child.getKey().equals("jarak")){
-                            distance = child.getValue().toString();
+                            String distance1 = child.getValue().toString();
+                            distance="1";
+
                             rideDistance.setText(distance.substring(0, Math.min(distance.length(), 5)) + " m");
                             getRidePrice();
                             //ridePrice=Double.valueOf(distance) *0.001;
@@ -155,7 +157,7 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
                         }
                         if (child.getKey().equals("location")){
                             pickupLatLng = new LatLng(Double.valueOf(child.child("from").child("lat").getValue().toString()),Double.valueOf(child.child("from").child("lng").getValue().toString()));
-                            mMap.addMarker(new MarkerOptions().position(pickupLatLng).title("pickup location").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pickup)));
+                            mMap.addMarker(new MarkerOptions().position(pickupLatLng).title("location").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pickup)));
                             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pickupLatLng,18));
                             //getRouteToMarker();
                             //mMap.animateCamera(CameraUpdateFactory.zoomIn());
@@ -187,6 +189,7 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
 
                     if(driverMap.get("service").equals("Battery")){
                         ridePrice = Double.valueOf(distance) * 0.001 + 150;
+
                     }
                     if(driverMap.get("service").equals("Tyre")){
                         ridePrice = Double.valueOf(distance) * 0.001 + 120;
@@ -236,7 +239,7 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
             .clientId(PayPalConfig.PAYPAL_CLIENT_ID);
 
     private void payPalPayment() {
-        PayPalPayment payment = new PayPalPayment(new BigDecimal(ridePrice), "Rs", "Service Charge",
+        PayPalPayment payment = new PayPalPayment(new BigDecimal(ridePrice), "USD", "Service Charge",
                 PayPalPayment.PAYMENT_INTENT_SALE);
 
         Intent intent = new Intent(this, PaymentActivity.class);
